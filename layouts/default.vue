@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app light>
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -24,39 +24,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        @click.stop="miniVariant = !miniVariant"
-        icon
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        @click.stop="clipped = !clipped"
-        icon
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        @click.stop="fixed = !fixed"
-        icon
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        @click.stop="rightDrawer = !rightDrawer"
-        icon
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
     <v-content>
       <v-container>
         <nuxt />
@@ -69,26 +36,59 @@
       fixed
     >
       <v-list>
-        <v-list-item @click.native="right = !right">
+        <v-list-item>
           <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
+            <v-icon>
+              fas fa-home
             </v-icon>
           </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
+          <v-list-item-title>Top</v-list-item-title>
+        </v-list-item>
+      </v-list>
+      <v-list>
+        <v-list-item>
+          <v-list-item-action>
+            <v-icon>
+              fas fa-user-alt
+            </v-icon>
+          </v-list-item-action>
+          <v-list-item-title>Mypage</v-list-item-title>
+        </v-list-item>
+      </v-list>
+      <v-list>
+        <v-list-item>
+          <v-list-item-action>
+            <v-icon>
+              fas fa-sign-out-alt
+            </v-icon>
+          </v-list-item-action>
+          <v-list-item-title>Sign out</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-footer
-      :fixed="fixed"
+      absolute
       app
+      color="primary"
     >
-      <span>&copy; 2019</span>
+      <span class="white--text">&copy; 2019-2020 Nozomi Kawakami</span>
     </v-footer>
+    <v-btn
+      @click.stop="rightDrawer = !rightDrawer"
+      fixed
+      light
+      fab
+      bottom
+      right
+      color="primary"
+    >
+      <v-icon>mdi-menu</v-icon>
+    </v-btn>
   </v-app>
 </template>
 
 <script>
+
 export default {
   data () {
     return {
@@ -115,3 +115,8 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  @import '../assets/scss/styles.scss';
+
+</style>

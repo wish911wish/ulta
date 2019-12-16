@@ -1,0 +1,43 @@
+.w-80{
+  width: 80%;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.paragraph{
+  font-size: 1.3rem;
+  color: #94AA2A;
+  margin: 4rem 0 2rem;
+  text-align: center;
+}
+
+.sns-icon{
+  width: 50px;
+}
+
+.icon-middle{
+  width: 65px;
+  height: 65px;
+}
+
+.object-fit-cover{
+  object-fit: cover;
+}
+
+.icon-frame-middle{
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  border: thin solid rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.contents-container{
+  max-width: 500px;
+  min-width: 270px;
+  margin: 0 auto;
+  padding: 0 10px;
+}

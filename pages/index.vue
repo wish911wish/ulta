@@ -69,9 +69,9 @@
           <v-btn
             color="primary"
             nuxt
-            to="/inspire"
+            to="/event"
           >
-            Continue
+            Events
           </v-btn>
         </v-card-actions>
       </v-card>

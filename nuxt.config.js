@@ -66,9 +66,13 @@ export default {
         light: {
           primary: '#94AA2A',
           accent: '#E47312',
+          font: '#707070',
           warning: colors.amber.base,
           error: colors.red.accent3
         }
+      },
+      options: {
+        customProperties: true
       }
     }
   },

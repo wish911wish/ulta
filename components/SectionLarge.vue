@@ -14,8 +14,6 @@ export default {
 
 <style scoped>
 h1 {
-  /* Custom Propertiesの設定方法を調べること */
-  /* color: var(--v-primary); */
-  color: #94AA2A;
+  color: var(--v-primary-base);
 }
 </style>

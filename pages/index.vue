@@ -20,7 +20,7 @@
           <v-btn
             color="primary"
             nuxt
-            to="/event"
+            to="/events"
           >
             Do Ultimate!!
           </v-btn>

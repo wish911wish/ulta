@@ -27,20 +27,32 @@
         <v-list-item>
           <v-list-item-action>
             <v-icon>
-              fas fa-user-alt
+              fas fa-sun
             </v-icon>
           </v-list-item-action>
           <v-list-item-title>
-            <nuxt-link to="/user/new" >My page</nuxt-link>
+            <nuxt-link to="/events" >Event</nuxt-link>
           </v-list-item-title>
         </v-list-item>
         <v-list-item>
           <v-list-item-action>
             <v-icon>
-              fas fa-sign-out-alt
+              fas fa-calendar-check
             </v-icon>
           </v-list-item-action>
-          <v-list-item-title>Sign out</v-list-item-title>
+          <v-list-item-title>
+            <nuxt-link to="/event/new" >New Event</nuxt-link>
+          </v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-action>
+            <v-icon>
+              fas fa-user-alt
+            </v-icon>
+          </v-list-item-action>
+          <v-list-item-title>
+            <nuxt-link to="/user/mypage" >My page</nuxt-link>
+          </v-list-item-title>
         </v-list-item>
         <v-list-item>
           <v-list-item-action>
@@ -61,6 +73,14 @@
           <v-list-item-title>
             <nuxt-link to="/user/edit" >User Edit</nuxt-link>
           </v-list-item-title>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-action>
+            <v-icon>
+              fas fa-sign-out-alt
+            </v-icon>
+          </v-list-item-action>
+          <v-list-item-title>Sign out</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>

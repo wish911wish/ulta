@@ -13,7 +13,7 @@
       <div class="contents-container" justify-center>
         <section-large :name="'WELCOME'" />
         <p class="paragraph">SNSアカウントから登録する</p>
-        <v-row class="mwidth-300 mx-auto my-0" :justify="'space-between'">
+        <v-row class="mwidth-400 mx-auto my-0" :justify="'space-between'">
           <img class="sns-icon" :src='GoogleIcon' />
           <img class="sns-icon" :src='FaceBookIcon' />
           <img class="sns-icon" :src='InstagramIcon' />
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style scoped>
-.mwidth-300{
+.mwidth-400{
   max-width: 400px;
 }
 

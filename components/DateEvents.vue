@@ -26,6 +26,15 @@
           </span>
         </div>
       </v-row>
+      <div v-if="event.myevent === true" class="text-center my-3">
+        <v-btn
+          color="primary"
+          small
+          to="/event/edit"
+        >
+          イベントを編集する
+        </v-btn>
+      </div>
       <div class="under-bar-dateil"></div>
     </div>
   </div>
@@ -54,9 +63,6 @@ export default {
     border-radius: 1px;
     margin-top: 5px;
   }
-  &__member{
-
-  }
 }
 
 .events-date{
@@ -69,6 +75,10 @@ export default {
     margin-bottom: 3px;
 
   }
+}
+
+.v-btn{
+  height: 20px;
 }
 
 </style>

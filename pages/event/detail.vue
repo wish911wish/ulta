@@ -35,7 +35,7 @@
         <div>
           <ul class="event-detail__member-list">
             <li class="event-detail__member" v-for="(member,index) in this.members" :key=index>
-              <div class="profile-image icon-frame w-h-40 mt-5">
+              <div class="icon-frame w-h-40 mt-5">
                 <img class="object-fit-cover w-100" :src='iconImage' />
               </div>
               <div class="event-detail__member-name">

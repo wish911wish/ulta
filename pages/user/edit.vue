@@ -12,7 +12,7 @@
     >
       <div class="contents-container">
         <section-large :name="'PROFILE'" />
-        <div class="profile-image icon-frame w-h-65 mt-5">
+        <div class="icon-frame w-h-65 mt-5">
           <img class="object-fit-cover w-100" :src='iconImage' />
         </div>
         <v-file-input @change="getFileContent" label="Image"></v-file-input>

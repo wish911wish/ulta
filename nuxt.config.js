@@ -25,6 +25,7 @@ export default {
   ** Global CSS
   */
   css: [
+    'firebaseui/dist/firebaseui.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -85,5 +86,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  router: {
+    middleware: ['authenticated']
   }
 }

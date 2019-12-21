@@ -44,14 +44,14 @@
             <nuxt-link to="/event/new" >New Event</nuxt-link>
           </v-list-item-title>
         </v-list-item>
-        <v-list-item>
+        <v-list-item v-if="isLoggedIn">
           <v-list-item-action>
             <v-icon>
               fas fa-user-alt
             </v-icon>
           </v-list-item-action>
           <v-list-item-title>
-            <nuxt-link to="/user/mypage" >My page</nuxt-link>
+            <nuxt-link to="/user/mypage" >{{ this.username }}</nuxt-link>
           </v-list-item-title>
         </v-list-item>
         <v-list-item>
@@ -74,7 +74,7 @@
             <nuxt-link to="/user/edit" >User Edit</nuxt-link>
           </v-list-item-title>
         </v-list-item>
-        <v-list-item>
+        <v-list-item v-if="isLoggedIn" @click="logout">
           <v-list-item-action>
             <v-icon>
               fas fa-sign-out-alt
@@ -106,6 +106,7 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   data () {
@@ -130,6 +131,17 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js'
     }
+  },
+  computed: {
+    ...mapState('auth', [
+      'username'
+    ]),
+    ...mapGetters('auth', [
+      'isLoggedIn'
+    ])
+  },
+  methods: {
+    ...mapActions('auth', ['logout'])
   }
 }
 </script>

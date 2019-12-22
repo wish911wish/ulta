@@ -6,6 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
+          command: echo $ENV_FILE | base64 --decode > firebase.config
+      - run:
           name: npm install
           command: npm i
       - run:
